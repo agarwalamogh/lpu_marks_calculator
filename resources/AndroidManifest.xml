@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="21" android:versionName="Edinburgh v4" package="com.akhil.lovely.lpu.infinitum.verto" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="25"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.akhil.lovely.lpu.infinitum.verto.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.akhil.lovely.lpu.infinitum.verto.permission.C2D_MESSAGE"/>
+    <application android:theme="@style/AppTheme" android:label="Marks Calc" android:icon="@mipmap/ic_launcher" android:name="com.akhil.lovely.lpu.infinitum.verto.MarksCalc" android:allowBackup="true" android:supportsRtl="true">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name="com.akhil.lovely.lpu.infinitum.verto.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:label="@string/title_theory_activity" android:name="com.akhil.lovely.lpu.infinitum.verto.activity_theory" android:screenOrientation="portrait" android:parentActivityName="com.akhil.lovely.lpu.infinitum.verto.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.akhil.lovely.lpu.infinitum.verto.MainActivity"/>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:label="@string/title_activity_activity_special" android:name="com.akhil.lovely.lpu.infinitum.verto.activity_special" android:screenOrientation="portrait" android:parentActivityName="com.akhil.lovely.lpu.infinitum.verto.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.akhil.lovely.lpu.infinitum.verto.MainActivity"/>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:label="@string/title_activity_activity_practical_n" android:name="com.akhil.lovely.lpu.infinitum.verto.activity_practical_n" android:screenOrientation="portrait" android:parentActivityName="com.akhil.lovely.lpu.infinitum.verto.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.akhil.lovely.lpu.infinitum.verto.MainActivity"/>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:label="@string/title_activity_activity_practical_c" android:name="com.akhil.lovely.lpu.infinitum.verto.activity_practical_c" android:screenOrientation="portrait" android:parentActivityName="com.akhil.lovely.lpu.infinitum.verto.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.akhil.lovely.lpu.infinitum.verto.MainActivity"/>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:label="@string/title_activity_disclaimer" android:name="com.akhil.lovely.lpu.infinitum.verto.disclaimer" android:screenOrientation="portrait" android:parentActivityName="com.akhil.lovely.lpu.infinitum.verto.MainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.akhil.lovely.lpu.infinitum.verto.MainActivity"/>
+        </activity>
+        <service android:name="com.akhil.lovely.lpu.infinitum.verto._MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.akhil.lovely.lpu.infinitum.verto._MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity android:theme="@style/Theme.IAPTheme" android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.akhil.lovely.lpu.infinitum.verto"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false"/>
+        <service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.akhil.lovely.lpu.infinitum.verto.firebaseinitprovider" android:initOrder="100"/>
+    </application>
+</manifest>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:padding="0dp" android:paddingLeft="0dp" android:paddingTop="0dp" android:paddingRight="0dp" android:paddingBottom="0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.akhil.lovely.lpu.infinitum.verto.DynamicImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/home_ui" android:scaleType="centerCrop" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/linearLayout" android:layout_alignParentTop="true" android:onClick="author_onclick">
+            <ImageView android:layout_gravity="center" android:background="@drawable/verto_logo" android:layout_width="100dp" android:layout_height="100dp" android:layout_alignParentTop="true" android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"/>
+            <TextView android:textStyle="bold" android:textColor="#fff" android:gravity="center_horizontal" android:id="@+id/textView3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="LPU MARKS CALCULATOR"/>
+            <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="10sp" android:typeface="sans" android:textStyle="bold" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="An Akhil Marsonya Appilcation"/>
+            <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:typeface="sans" android:textStyle="normal|bold|italic" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Now with Re-Appear Support"/>
+            <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="13sp" android:typeface="sans" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/textView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24sp" android:layout_marginTop="2sp" android:layout_marginRight="24sp" android:text="Reappear Option is Available within the Categories Below"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout" android:paddingLeft="15dp" android:paddingTop="15dp" android:paddingRight="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="345dp" android:layout_above="@+id/disclaimer" android:layout_alignParentBottom="false" android:layout_centerInParent="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="150dp">
+                <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageButton android:id="@+id/theory_button_ui" android:background="@drawable/theory_button" android:layout_width="150dp" android:layout_height="150dp" android:layout_marginRight="7dp"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageButton android:id="@+id/special_button_ui" android:background="@drawable/special_button" android:layout_width="150dp" android:layout_height="150dp" android:layout_marginLeft="7dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="150dp" android:layout_marginTop="15dp">
+                <LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageButton android:id="@+id/practical_button_n_ui" android:background="@drawable/practical_n_button" android:layout_width="150dp" android:layout_height="150dp" android:layout_marginRight="7dp"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageButton android:id="@+id/practical_button_c_ui" android:background="@drawable/practical_c_button" android:layout_width="150dp" android:layout_height="150dp" android:layout_marginLeft="7dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="10dp" android:textColor="#b08184" android:id="@+id/disclaimer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="By Using this App you Agree to the Disclaimer. Click Here" android:layout_above="@+id/textView4" android:layout_alignParentBottom="false" android:layout_centerHorizontal="true"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="8.5dp" android:textStyle="bold" android:textColor="#d1d1d1" android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" android:text="WHATSAPP TO +91 88495 79697 FOR HELP OR REPORTING ERROR" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</RelativeLayout>
